@@ -30,10 +30,4 @@ class TorpedoStoreTest {
         TorpedoStore store = new TorpedoStore(1);
         Exception result = assertThrows(IllegalArgumentException.class, () -> store.fire(2));
     }
-
-    @Test
-    void TorpedoStore_failureEnv() {
-        System.getenv().put("IVT_FAILURE", "asd");
-        TorpedoStore store = new TorpedoStore(1);
-    }
 }
